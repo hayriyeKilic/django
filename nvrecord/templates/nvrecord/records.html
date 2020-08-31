@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <h4>Last Points</h4>
+    </head>
+    <body>
+        <table>
+          <thead>
+            <tr>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Vehicle Plate</th>
+              <th>Datetime</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for item in items %}
+              <tr>              
+                <td>{{item.latitude}}</td>
+                <td>{{item.longitude}}</td>
+                <td>{{item.vehicle__plate}}</td>
+                <td>{{item.datetime | date:"d.m.Y H:i:s"}}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+    </body>
+</html>
